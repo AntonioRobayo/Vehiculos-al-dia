@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#1d4ed8"/>
+  <!-- Car silhouette -->
+  <path d="M128 300 L148 240 L180 220 L332 220 L364 240 L384 300 L384 320 L128 320 Z"
+        fill="white" opacity="0.95"/>
+  <rect x="168" y="240" width="176" height="60" rx="16" fill="#1d4ed8"/>
+  <!-- Wheels -->
+  <circle cx="192" cy="326" r="34" fill="white"/>
+  <circle cx="192" cy="326" r="18" fill="#1d4ed8"/>
+  <circle cx="320" cy="326" r="34" fill="white"/>
+  <circle cx="320" cy="326" r="18" fill="#1d4ed8"/>
+  <!-- Checkmark / calendar hint -->
+  <circle cx="360" cy="152" r="64" fill="#22c55e"/>
+  <path d="M332 152 L350 170 L388 132" stroke="white" stroke-width="12"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
