@@ -18,6 +18,7 @@ export type Database = {
           full_name: string | null;
           avatar_url: string | null;
           stripe_customer_id: string | null;
+          role: "user" | "admin";
           created_at: string;
           updated_at: string;
         };
@@ -26,6 +27,7 @@ export type Database = {
           full_name?: string | null;
           avatar_url?: string | null;
           stripe_customer_id?: string | null;
+          role?: "user" | "admin";
           created_at?: string;
           updated_at?: string;
         };
@@ -34,6 +36,7 @@ export type Database = {
           full_name?: string | null;
           avatar_url?: string | null;
           stripe_customer_id?: string | null;
+          role?: "user" | "admin";
           updated_at?: string;
         };
         Relationships: [];

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { Bell } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { AdsWidget } from "@/components/shared/AdsWidget";
 
 function daysUntil(dateStr: string | null): number | null {
   if (!dateStr) return null;
@@ -123,6 +124,11 @@ export default async function DashboardPage() {
             </Link>
           ))}
         </div>
+      </section>
+
+      {/* Sponsored ad */}
+      <section className="px-4 mt-6">
+        <AdsWidget />
       </section>
     </div>
   );
