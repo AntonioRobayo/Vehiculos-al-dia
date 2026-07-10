@@ -3,10 +3,18 @@ import { stripe } from "./client";
 
 /**
  * Returns true if the user can add another vehicle.
- * Rule: 1 free vehicle + 1 slot per active license.
+ * Admins always can. Regular users: 1 free slot + 1 per active license.
  */
 export async function canAddVehicle(userId: string): Promise<boolean> {
   const supabase = await createClient();
+
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("role")
+    .eq("id", userId)
+    .single();
+
+  if (profile?.role === "admin") return true;
 
   const [{ count: vehicleCount }, { count: licenseCount }] = await Promise.all([
     supabase
