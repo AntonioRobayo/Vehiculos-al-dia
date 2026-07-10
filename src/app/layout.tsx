@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { SplashScreen } from "@/components/shared/SplashScreen";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Vehículo al Día",
-  description: "Gestiona el historial de mantenimiento de tus vehículos",
+  description: "Todo al día, todo tranquilo.",
   applicationName: "Vehículo al Día",
   appleWebApp: {
     capable: true,
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1d4ed8",
+  themeColor: "#2563EB",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -31,7 +32,10 @@ export default function RootLayout({
       <head>
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
       </head>
-      <body className="min-h-full bg-background text-foreground">{children}</body>
+      <body className="min-h-full bg-background text-foreground">
+        <SplashScreen />
+        {children}
+      </body>
     </html>
   );
 }
