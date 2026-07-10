@@ -37,6 +37,7 @@ export function SplashScreen() {
         muted
         playsInline
         onEnded={handleEnd}
+        onError={handleEnd}
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
     </div>
