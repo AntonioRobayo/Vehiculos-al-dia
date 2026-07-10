@@ -32,20 +32,6 @@ export async function register(_prev: AuthState, formData: FormData): Promise<Au
   redirect("/dashboard");
 }
 
-export async function loginWithGoogle(): Promise<void> {
-  const supabase = await createClient();
-
-  const { data, error } = await supabase.auth.signInWithOAuth({
-    provider: "google",
-    options: {
-      redirectTo: `${process.env.NEXT_PUBLIC_APP_URL}/auth/callback`,
-    },
-  });
-
-  if (error) throw new Error(error.message);
-  if (data.url) redirect(data.url);
-}
-
 export async function logout() {
   const supabase = await createClient();
   await supabase.auth.signOut();
