@@ -22,9 +22,17 @@ export function LoginForm() {
 
   return (
     <div className="space-y-6">
-      <div className="text-center space-y-1">
-        <h1 className="text-2xl font-bold tracking-tight">Vehículo al Día</h1>
-        <p className="text-sm text-muted-foreground">Todo al día, todo tranquilo.</p>
+      <div className="text-center space-y-3">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/icons/icon-192.png"
+          alt="Vehículo al Día"
+          className="mx-auto w-20 h-20 rounded-2xl shadow-md"
+        />
+        <div className="space-y-1">
+          <h1 className="text-2xl font-bold tracking-tight">Vehículo al Día</h1>
+          <p className="text-sm text-muted-foreground">Todo al día, todo tranquilo.</p>
+        </div>
       </div>
 
       <form action={formAction} className="space-y-4">
